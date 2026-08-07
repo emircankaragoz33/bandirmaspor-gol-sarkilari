@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bandırmaspor Gol Antemleri</title>
+<link rel="icon" href="/logo.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<section id="gate">
+  <svg class="stadium-bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0b0607"/>
+        <stop offset="55%" stop-color="#150a0d"/>
+        <stop offset="100%" stop-color="#2c0d16"/>
+      </linearGradient>
+      <radialGradient id="beam" cx="50%" cy="0%" r="85%">
+        <stop offset="0%" stop-color="#f4efe4" stop-opacity="0.16"/>
+        <stop offset="60%" stop-color="#f4efe4" stop-opacity="0.03"/>
+        <stop offset="100%" stop-color="#f4efe4" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="pitchFade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#651927" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#3c0e18" stop-opacity="0.9"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="0" width="1600" height="900" fill="url(#sky)"/>
+    <g opacity="0.9">
+      <polygon points="150,140 20,900 280,900" fill="url(#beam)"/>
+      <polygon points="1450,140 1320,900 1580,900" fill="url(#beam)"/>
+    </g>
+    <g stroke="#3c0e18" stroke-width="6" fill="none" opacity="0.85">
+      <line x1="150" y1="140" x2="150" y2="640"/>
+      <line x1="1450" y1="140" x2="1450" y2="640"/>
+    </g>
+    <g fill="#3c0e18" opacity="0.85">
+      <rect x="90" y="118" width="120" height="26" rx="3"/>
+      <rect x="1390" y="118" width="120" height="26" rx="3"/>
+      <line x1="95" y1="131" x2="205" y2="131" stroke="#f4efe4" stroke-opacity="0.25" stroke-width="2"/>
+      <line x1="1395" y1="131" x2="1505" y2="131" stroke="#f4efe4" stroke-opacity="0.25" stroke-width="2"/>
+    </g>
+    <g fill="none" stroke="#651927">
+      <path d="M -50 760 Q 800 560 1650 760" stroke-width="46" opacity="0.55"/>
+      <path d="M -50 800 Q 800 610 1650 800" stroke-width="34" opacity="0.7"/>
+      <path d="M -50 838 Q 800 660 1650 838" stroke-width="26" opacity="0.85"/>
+    </g>
+    <path d="M -50 760 Q 800 560 1650 760" stroke="#f4efe4" stroke-width="46" opacity="0.05" stroke-dasharray="4 10" fill="none"/>
+    <rect x="0" y="838" width="1600" height="62" fill="url(#pitchFade)"/>
+    <g stroke="#f4efe4" stroke-opacity="0.18" stroke-width="2" fill="none">
+      <line x1="0" y1="869" x2="1600" y2="869"/>
+      <ellipse cx="800" cy="900" rx="180" ry="60"/>
+    </g>
+  </svg>
+
+  <div class="gate-content">
+    <img class="crest" src="/logo.png" alt="Bandırmaspor Armas">
+    <p class="kicker">17 Eylül Stadyumu &middot; Boncuklar</p>
+    <h1 class="gate-title">Gol Antemleri</h1>
+    <p class="gate-sub">Her oyuncunun sahaya çıkış / gol şarkısı — takıma göre listeyi seç, dinle, indir.</p>
+
+    <div class="gates">
+      <button class="gate-btn" data-open="tr">
+        <div class="flag-row">🇹🇷</div>
+        <div class="gate-btn-title">Türk Oyuncular</div>
+        <div class="gate-btn-count" id="trCount">&nbsp;</div>
+      </button>
+      <button class="gate-btn" data-open="foreign">
+        <div class="flag-row">🌍</div>
+        <div class="gate-btn-title">Yabancı Oyuncular</div>
+        <div class="gate-btn-count" id="foreignCount">&nbsp;</div>
+      </button>
+    </div>
+  </div>
+
+  <div class="gate-foot">
+    <button class="text-link" data-open="all">Tüm Kadroyu Gör</button>
+    <button class="text-link" id="gateZipAll">Tüm Şarkıları İndir (ZIP)</button>
+  </div>
+</section>
+
+<section id="listView">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <button class="back-btn" id="backBtn">←</button>
+      <img class="topbar-crest" src="/logo.png" alt="">
+      <div class="topbar-title" id="topTitle">Türk Oyuncular</div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab" data-group="tr">Türk</div>
+    <div class="tab" data-group="foreign">Yabancı</div>
+    <div class="tab" data-group="all">Tümü</div>
+  </div>
+
+  <main>
+    <div class="controls">
+      <input id="search" type="text" placeholder="Oyuncu, şarkı veya sanatçı ara...">
+      <button class="zip-btn" id="zipBtn">⬇ Bu Grubu İndir</button>
+    </div>
+    <div id="count"></div>
+    <div class="list" id="list"></div>
+  </main>
+
+  <footer>Bandırmaspor Gol Antemleri Arşivi &middot; Bordo-Beyaz</footer>
+</section>
+
+<script src="/data.js"></script>
+<script src="/photos.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
