@@ -43,9 +43,9 @@ const STADIUM_CATEGORIES = [
 
 const STADIUM_TRACKS = {
   macOncesi: [
-    { title: "UEFA Şampiyonlar Ligi Marşı", artist: "Tony Britten", file: "1-sampiyonlar-ligi-marsi.mp3" },
-    { title: "Enter Sandman",               artist: "Metallica", file: "2-enter-sandman.mp3" },
-    { title: "Seven Nation Army",           artist: "The White Stripes", file: "3-seven-nation-army.mp3" }
+    { title: "Enter Sandman",     artist: "Metallica", file: "1-enter-sandman.mp3" },
+    { title: "Seven Nation Army", artist: "The White Stripes", file: "2-seven-nation-army.mp3" },
+    { title: "Thunderstruck",     artist: "AC/DC", file: "3-thunderstruck.mp3" }
   ],
   isinma: [
     { title: "Holigan",        artist: "Athena", file: "1-holigan.mp3" },
