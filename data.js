@@ -43,9 +43,9 @@ const STADIUM_CATEGORIES = [
 
 const STADIUM_TRACKS = {
   macOncesi: [
-    { title: "Enter Sandman",     artist: "Metallica", file: "1-enter-sandman.mp3" },
-    { title: "Seven Nation Army", artist: "The White Stripes", file: "2-seven-nation-army.mp3" },
-    { title: "Thunderstruck",     artist: "AC/DC", file: "3-thunderstruck.mp3" }
+    { title: "Seven Nation Army", artist: "The White Stripes", file: "1-seven-nation-army.mp3" },
+    { title: "Sandstorm",         artist: "Darude", file: "2-sandstorm.mp3" },
+    { title: "Freed from Desire", artist: "Gala", file: "3-freed-from-desire.mp3" }
   ],
   isinma: [
     { title: "Holigan",        artist: "Athena", file: "1-holigan.mp3" },
