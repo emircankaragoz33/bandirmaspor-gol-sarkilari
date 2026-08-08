@@ -8,6 +8,7 @@ const ZIP_URLS = {
 
 let songs = [];
 let currentGroup = "tr";
+const STADIUM_GROUPS = STADIUM_CATEGORIES.map(c => c.id);
 
 function enc(p) {
   return p.split("/").map(encodeURIComponent).join("/");
@@ -89,17 +90,83 @@ function setGroup(group) {
   renderList();
 }
 
+function isStadiumGroup(group) {
+  return STADIUM_GROUPS.includes(group);
+}
+
 function syncTabs() {
+  const stadium = isStadiumGroup(currentGroup);
+  document.getElementById("squadTabs").style.display = stadium ? "none" : "";
+  document.getElementById("stadiumTabs").style.display = stadium ? "" : "none";
+  document.getElementById("search").style.display = stadium ? "none" : "";
+  document.getElementById("zipBtn").style.display = stadium ? "none" : "";
+
   document.querySelectorAll(".tab").forEach(tab => {
     tab.classList.toggle("active", tab.dataset.group === currentGroup);
   });
+
+  if (stadium) {
+    const cat = STADIUM_CATEGORIES.find(c => c.id === currentGroup);
+    document.getElementById("topTitle").textContent = "Stad Müzikler — " + (cat ? cat.name : "");
+    return;
+  }
   const titles = { tr: "Türk Oyuncular", foreign: "Yabancı Oyuncular", all: "Tüm Kadro" };
   document.getElementById("topTitle").textContent = titles[currentGroup];
   document.getElementById("zipBtn").textContent =
     currentGroup === "all" ? "⬇ Tümünü İndir" : "⬇ Bu Grubu İndir";
 }
 
+function renderStadiumList() {
+  const tracks = STADIUM_TRACKS[currentGroup] || [];
+  document.getElementById("count").textContent = tracks.length + " ŞARKI";
+  const list = document.getElementById("list");
+
+  list.innerHTML = tracks.map((t, i) => {
+    const path = currentGroup + "/" + t.file;
+    const streamUrl = API_BASE + "/stadium/" + enc(path);
+    const downloadUrl = API_BASE + "/stadium/download/" + enc(path);
+    return `
+      <div class="card">
+        <div class="card-photo card-photo-empty">${t.title.charAt(0)}</div>
+        <div class="card-num">${String(i + 1).padStart(2, "0")}</div>
+        <div class="card-meta">
+          <div class="card-player">${t.title}</div>
+          <div class="card-song"><span class="artist">${t.artist}</span></div>
+        </div>
+        <div class="card-actions">
+          <a class="dl" href="${downloadUrl}" download>⬇ İndir</a>
+        </div>
+        <div class="player">
+          <button class="play-btn" type="button" aria-label="Oynat">
+            <svg class="ic-play" viewBox="0 0 24 24" width="14" height="14"><path d="M6 4l14 8-14 8V4z" fill="currentColor"/></svg>
+            <svg class="ic-pause" viewBox="0 0 24 24" width="14" height="14" style="display:none"><path d="M6 4h4v16H6zM14 4h4v16h-4z" fill="currentColor"/></svg>
+          </button>
+          <div class="seek-wrap">
+            <div class="seek-hit">
+              <div class="seek-track">
+                <div class="seek-fill"></div>
+                <div class="seek-thumb"></div>
+              </div>
+            </div>
+            <div class="time-row">
+              <span class="cur">0:00</span>
+              <span class="dur">0:00</span>
+            </div>
+          </div>
+          <audio preload="metadata" src="${streamUrl}"></audio>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  wirePlayers(list);
+}
+
 function renderList() {
+  if (isStadiumGroup(currentGroup)) {
+    renderStadiumList();
+    return;
+  }
   const q = turkishLower(document.getElementById("search").value.trim());
   let items = currentGroup === "all" ? songs : songs.filter(s => s.group === currentGroup);
   if (q) {

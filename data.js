@@ -31,3 +31,35 @@ const PLAYER_INFO = {
   "Tosin Kehinde":               { country: "Nijerya",   flag: "🇳🇬", artist: "Los Lobos",                               note: "Dünya çapında stadyum parti klasiği" },
   "Wilson Samake":               { country: "Mali",      flag: "🇲🇱", artist: "The Roots",                               note: "Yaygın alternatif stadyum versiyonu", locked: true }
 };
+
+// Stad Müzikler: maç günü akışına göre kategoriler. file adları öneridir,
+// gerçek MP3'ler sunucuya /stadium/<kategoriId>/<file> yoluna yüklenecek.
+const STADIUM_CATEGORIES = [
+  { id: "macOncesi",  name: "Maç Öncesi" },
+  { id: "isinma",     name: "Isınma" },
+  { id: "devreArasi", name: "Devre Arası" },
+  { id: "macSonu",    name: "Maç Sonu" }
+];
+
+const STADIUM_TRACKS = {
+  macOncesi: [
+    { title: "Diriliş Ertuğrul Ana Tema", artist: "Alpay Göktekin", file: "1-dirilis-ertugrul-ana-tema.mp3" },
+    { title: "Fetih 1453 Ana Tema",       artist: "Fatih Fetih 1453 OST", file: "2-fetih-1453-ana-tema.mp3" },
+    { title: "Ceddin Deden",              artist: "Mehteran", file: "3-ceddin-deden.mp3" }
+  ],
+  isinma: [
+    { title: "Holigan",        artist: "Athena", file: "1-holigan.mp3" },
+    { title: "Köprüaltı",      artist: "Duman",  file: "2-koprualti.mp3" },
+    { title: "Bangır Bangır",  artist: "Gülşen",  file: "3-bangir-bangir.mp3" }
+  ],
+  devreArasi: [
+    { title: "Şımarık",     artist: "Tarkan",  file: "1-simarik.mp3" },
+    { title: "Düm Tek Tek", artist: "Hadise",  file: "2-dum-tek-tek.mp3" },
+    { title: "Deli",        artist: "Athena",  file: "3-deli.mp3" }
+  ],
+  macSonu: [
+    { title: "Hadi Bakalım", artist: "Sezen Aksu",   file: "1-hadi-bakalim.mp3" },
+    { title: "Dönence",      artist: "Barış Manço",  file: "2-donence.mp3" },
+    { title: "Eyvallah",     artist: "Duman",        file: "3-eyvallah.mp3" }
+  ]
+};
