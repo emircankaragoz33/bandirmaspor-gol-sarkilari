@@ -35,14 +35,14 @@ const PLAYER_INFO = {
 // Stad Müzikler: maç günü akışına göre kategoriler. file adları öneridir,
 // gerçek MP3'ler sunucuya /stadium/<kategoriId>/<file> yoluna yüklenecek.
 const STADIUM_CATEGORIES = [
-  { id: "macOncesi",  name: "Maç Öncesi" },
-  { id: "isinma",     name: "Isınma" },
-  { id: "devreArasi", name: "Devre Arası" },
-  { id: "macSonu",    name: "Maç Sonu" }
+  { id: "mac-oncesi",  name: "Maç Öncesi" },
+  { id: "isinma",      name: "Isınma" },
+  { id: "devre-arasi", name: "Devre Arası" },
+  { id: "mac-sonu",    name: "Maç Sonu" }
 ];
 
 const STADIUM_TRACKS = {
-  macOncesi: [
+  "mac-oncesi": [
     { title: "Seven Nation Army", artist: "The White Stripes", file: "1-seven-nation-army.mp3" },
     { title: "Chelsea Dagger",    artist: "The Fratellis", file: "2-chelsea-dagger.mp3" },
     { title: "Tequila",           artist: "The Champs", file: "3-tequila.mp3" }
@@ -52,12 +52,12 @@ const STADIUM_TRACKS = {
     { title: "Cambaz",        artist: "Mor ve Ötesi", file: "2-cambaz.mp3" },
     { title: "Bangır Bangır", artist: "Gülşen", file: "3-bangir-bangir.mp3" }
   ],
-  devreArasi: [
+  "devre-arasi": [
     { title: "Şımarık",  artist: "Tarkan",       file: "1-simarik.mp3" },
     { title: "Şıkıdım",  artist: "Tarkan", file: "2-sikidim.mp3" },
     { title: "Araba",    artist: "Mustafa Sandal", file: "3-araba.mp3" }
   ],
-  macSonu: [
+  "mac-sonu": [
     { title: "Hadi Bakalım", artist: "Sezen Aksu",  file: "1-hadi-bakalim.mp3" },
     { title: "Dönence",      artist: "Barış Manço", file: "2-donence.mp3" },
     { title: "Kuzu Kuzu",    artist: "Tarkan",      file: "3-kuzu-kuzu.mp3" }

@@ -123,8 +123,8 @@ function renderStadiumList() {
 
   list.innerHTML = tracks.map((t, i) => {
     const path = currentGroup + "/" + t.file;
-    const streamUrl = API_BASE + "/stadium/" + enc(path);
-    const downloadUrl = API_BASE + "/stadium/download/" + enc(path);
+    const streamUrl = API_BASE + "/stad-muzikleri/" + enc(path);
+    const downloadUrl = streamUrl;
     return `
       <div class="card">
         <div class="card-photo card-photo-empty">${t.title.charAt(0)}</div>
