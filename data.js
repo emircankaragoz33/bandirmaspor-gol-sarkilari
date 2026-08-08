@@ -48,9 +48,9 @@ const STADIUM_TRACKS = {
     { title: "Tequila",           artist: "The Champs", file: "3-tequila.mp3" }
   ],
   isinma: [
-    { title: "Holigan",        artist: "Athena", file: "1-holigan.mp3" },
-    { title: "Köprüaltı",      artist: "Duman",  file: "2-koprualti.mp3" },
-    { title: "Bangır Bangır",  artist: "Gülşen",  file: "3-bangir-bangir.mp3" }
+    { title: "Holigan",       artist: "Athena", file: "1-holigan.mp3" },
+    { title: "Cambaz",        artist: "Mor ve Ötesi", file: "2-cambaz.mp3" },
+    { title: "Bangır Bangır", artist: "Gülşen", file: "3-bangir-bangir.mp3" }
   ],
   devreArasi: [
     { title: "Şımarık",     artist: "Tarkan",  file: "1-simarik.mp3" },
@@ -58,8 +58,8 @@ const STADIUM_TRACKS = {
     { title: "Deli",        artist: "Athena",  file: "3-deli.mp3" }
   ],
   macSonu: [
-    { title: "Hadi Bakalım", artist: "Sezen Aksu",   file: "1-hadi-bakalim.mp3" },
-    { title: "Dönence",      artist: "Barış Manço",  file: "2-donence.mp3" },
-    { title: "Eyvallah",     artist: "Duman",        file: "3-eyvallah.mp3" }
+    { title: "Hadi Bakalım", artist: "Sezen Aksu",  file: "1-hadi-bakalim.mp3" },
+    { title: "Dönence",      artist: "Barış Manço", file: "2-donence.mp3" },
+    { title: "Superstar",    artist: "Ajda Pekkan", file: "3-superstar.mp3" }
   ]
 };
