@@ -44,8 +44,8 @@ const STADIUM_CATEGORIES = [
 const STADIUM_TRACKS = {
   macOncesi: [
     { title: "Seven Nation Army", artist: "The White Stripes", file: "1-seven-nation-army.mp3" },
-    { title: "Better Off Alone",  artist: "Alice Deejay", file: "2-better-off-alone.mp3" },
-    { title: "Blue (Da Ba Dee)",  artist: "Eiffel 65", file: "3-blue-da-ba-dee.mp3" }
+    { title: "Chelsea Dagger",    artist: "The Fratellis", file: "2-chelsea-dagger.mp3" },
+    { title: "Tequila",           artist: "The Champs", file: "3-tequila.mp3" }
   ],
   isinma: [
     { title: "Holigan",        artist: "Athena", file: "1-holigan.mp3" },
