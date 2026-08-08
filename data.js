@@ -43,9 +43,9 @@ const STADIUM_CATEGORIES = [
 
 const STADIUM_TRACKS = {
   macOncesi: [
-    { title: "300 Violin Orchestra",        artist: "Jorge Quintero", file: "1-300-violin-orchestra.mp3" },
-    { title: "Sandstorm",                   artist: "Darude", file: "2-sandstorm.mp3" },
-    { title: "Lux Aeterna (Requiem for a Dream)", artist: "Clint Mansell", file: "3-lux-aeterna.mp3" }
+    { title: "UEFA Şampiyonlar Ligi Marşı", artist: "Tony Britten", file: "1-sampiyonlar-ligi-marsi.mp3" },
+    { title: "Enter Sandman",               artist: "Metallica", file: "2-enter-sandman.mp3" },
+    { title: "Seven Nation Army",           artist: "The White Stripes", file: "3-seven-nation-army.mp3" }
   ],
   isinma: [
     { title: "Holigan",        artist: "Athena", file: "1-holigan.mp3" },
