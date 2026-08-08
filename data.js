@@ -60,6 +60,6 @@ const STADIUM_TRACKS = {
   macSonu: [
     { title: "Hadi Bakalım", artist: "Sezen Aksu",  file: "1-hadi-bakalim.mp3" },
     { title: "Dönence",      artist: "Barış Manço", file: "2-donence.mp3" },
-    { title: "Superstar",    artist: "Ajda Pekkan", file: "3-superstar.mp3" }
+    { title: "Kuzu Kuzu",    artist: "Tarkan",      file: "3-kuzu-kuzu.mp3" }
   ]
 };
