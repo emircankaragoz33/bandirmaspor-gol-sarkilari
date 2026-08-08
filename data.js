@@ -43,9 +43,9 @@ const STADIUM_CATEGORIES = [
 
 const STADIUM_TRACKS = {
   macOncesi: [
-    { title: "Diriliş Ertuğrul Ana Tema", artist: "Alpay Göktekin", file: "1-dirilis-ertugrul-ana-tema.mp3" },
-    { title: "Fetih 1453 Ana Tema",       artist: "Fatih Fetih 1453 OST", file: "2-fetih-1453-ana-tema.mp3" },
-    { title: "Ceddin Deden",              artist: "Mehteran", file: "3-ceddin-deden.mp3" }
+    { title: "300 Violin Orchestra",        artist: "Jorge Quintero", file: "1-300-violin-orchestra.mp3" },
+    { title: "Sandstorm",                   artist: "Darude", file: "2-sandstorm.mp3" },
+    { title: "Lux Aeterna (Requiem for a Dream)", artist: "Clint Mansell", file: "3-lux-aeterna.mp3" }
   ],
   isinma: [
     { title: "Holigan",        artist: "Athena", file: "1-holigan.mp3" },
