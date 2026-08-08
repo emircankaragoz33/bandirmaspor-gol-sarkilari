@@ -53,9 +53,9 @@ const STADIUM_TRACKS = {
     { title: "Bangır Bangır", artist: "Gülşen", file: "3-bangir-bangir.mp3" }
   ],
   devreArasi: [
-    { title: "Şımarık",     artist: "Tarkan",  file: "1-simarik.mp3" },
-    { title: "Düm Tek Tek", artist: "Hadise",  file: "2-dum-tek-tek.mp3" },
-    { title: "Araba",       artist: "Mustafa Sandal", file: "3-araba.mp3" }
+    { title: "Şımarık",  artist: "Tarkan",       file: "1-simarik.mp3" },
+    { title: "Şıkıdım",  artist: "Kenan Doğulu", file: "2-sikidim.mp3" },
+    { title: "Araba",    artist: "Mustafa Sandal", file: "3-araba.mp3" }
   ],
   macSonu: [
     { title: "Hadi Bakalım", artist: "Sezen Aksu",  file: "1-hadi-bakalim.mp3" },
